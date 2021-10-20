@@ -38,7 +38,7 @@ XceptionModel = Xception(include_top=False, pooling="avg")
 #photo = extract_features(img_path, xception_model)
 #img = Image.open(img_path)
 
-model_weights_save_path = 'C:\\Users\\User\\Deploy\\model_13.h5'
+model_weights_save_path = 'model_13.h5'
 predictionModel = load_model(model_weights_save_path)"""
 
 @app.route('/')
