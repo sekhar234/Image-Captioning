@@ -1,0 +1,29 @@
+﻿<html>
+   <head>
+      <title>Caption IT</title>
+      
+      
+   </head>
+   <body>
+    <center>
+      <h1> Automated GEN. Captioning</h1><br><br>
+      <form action="{{url_for('predictCaption')}}" method="POST" enctype="multipart/form-data">
+  	<label for="img">Select image:</label>
+  	<input type="file" id="img" name="img" accept="image/*" onchange="preview()">
+        <img id="frame" src="" width="100px" height="100px"/>
+
+  	<input type="submit">
+
+     </form>
+      {{prediction_text}}
+      <br><br>
+     <script>
+     function preview() {
+     frame.src=URL.createObjectURL(event.target.files[0]);
+     }
+    </script>
+
+       
+     </center>
+    </body>
+</html>

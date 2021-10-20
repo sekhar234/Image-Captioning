@@ -1,0 +1,19 @@
+﻿<html>
+   <head>
+      <title>Caption IT</title>
+      
+      
+   </head>
+   <body>
+   <center>
+      <h1>Automated Image</h1>
+      <h1>Captioning</h1>
+      <form action="{{url_for("predictCaption")}} method="POST">
+  	<label for="img">Select image:</label>
+  	<input type="file" id="img" name="img" accept="image/*">
+  	<input type="submit">
+     </form>
+       {{prediction_text}}
+    </center>
+    </body>
+</html>
